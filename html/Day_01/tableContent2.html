@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블 셀 병합</title>
+    <style>
+        table {
+            border: 2px solid #333;
+            border-collapse: collapse;
+        }
+        table thead {
+            background-color: #eee;
+        }
+        table th,
+        table td {
+            border: 1px solid #eee;
+            padding: 10px;
+        }
+    </style>
+    
+</head>
+<body>
+    <h2>진료시간 변경</h2>
+    <p>진료시작 및 종료시각이 30분씩 앞당겨집니다.</p>
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th>이비인후과</th>
+                <th>내과</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>평일</th>
+                <td colspan="2">08:30 ~ 17:30</td> <!--2칸이 합쳐짐-->
+            </tr>
+            <tr>
+                <th>토요일</th>
+                <td>08:30 ~ 13:30</td>
+                <td>8:30 ~ 12:30</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

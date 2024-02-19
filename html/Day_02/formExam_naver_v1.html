@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naver Login</title>
+</head>
+<body>
+<div class="content">
+    <div class="header">
+        <a href="https://www.naver.com/"><img src="../images/naver.png" alt="네이버" width="200"></a>
+    </div>
+
+    <div class="form">
+        <form action="" method="post">
+            <label for="userid">아이디</label><br>
+            <input type="text" name="userid" id="userid" placeholder="@naver.com" required>
+            <br><br>
+
+            <label for="userpwd">비밀번호</label><br>
+            <input type="password" name="userpwd" id="userpwd" placeholder="비밀번호 입력" required>
+            <br><br>
+
+            <label for="confirmpwd">비밀번호 재확인</label><br>
+            <input type="password" name="confirmpwd" id="confirmpwd" placeholder="비밀번호 재입력" required>
+            <br><br>
+
+            <label for="username">이름</label><br>
+            <input type="text" name="username" id="username" placeholder="이름 입력" required>
+            <br><br>
+
+            <label for="birthday">생년월일</label><br>
+            <input type="number" name="byear" id="birthday" maxlength="4" placeholder="년(4자)" required>
+            <select name="bmonth" id="birthday" required>
+                <optgroup>
+                    <option value="january">1월</option>
+                    <option value="february">2월</option>
+                    <option value="march">3월</option>
+                    <option value="april">4월</option>
+                    <option value="may">5월</option>
+                    <option value="june">6월</option>
+                    <option value="july">7월</option>
+                    <option value="august">8월</option>
+                    <option value="september">9월</option>
+                    <option value="october">10월</option>
+                    <option value="november">11월</option>
+                    <option value="december">12월</option>
+                </optgroup>
+            </select>
+            <input type="number" name="bday" id="birthday" maxlength="2" placeholder="일" required>
+            <br><br>
+
+            <label for="gender">성별
+                <input type="radio" name="gender" checked="checked">여성 &nbsp;
+                <input type="radio" name="gender">남성 &nbsp;
+            </label><br>
+            <br><br>
+
+            <label for="email">본인 확인 이메일(선택)</label><br>
+            <input type="email" name="email" id="email" placeholder="선택입력">
+            <br><br>
+
+            <!--for, id 없애고 label 태그로 묶음-->
+            <label for="phone">휴대전화</label><br>
+            <select name="nation" id="phone" required>
+                <optgroup>
+                    <option value="82">대한민국 +82</option>
+                    <option value="44">영국 +44</option>
+                    <option value="65">싱가폴 +65</option>
+                </optgroup>
+            </select>
+            <input type="tel" name="phonenum" id="phone" required>
+            <input type="button" value="인증번호 받기"><br><br>
+            <input type="text" name="confignum" id="phone" placeholder="인증번호를 입력하세요." required>
+            <input type="button" value="인증번호 확인">
+            <br><br>
+
+            <input type="checkbox" value="agree" required> 개인정보 수집 및 이용 동의
+            <br><br>
+
+            <div class="buttonwrap">
+                <input type="submit" value="가입하기">
+            </div>
+            <br><br><br>
+        </form>
+    </div>
+
+    <div class="footer">
+        <a href="https://policy.naver.com/rules/service.html">이용약관</a>
+        <a href="https://policy.naver.com/rules/privacy.html">개인정보처리방침</a>
+        <a href="https://policy.naver.com/rules/disclaimer.html">책임의 한계와 법적고지</a>
+        <a href="https://help.naver.com/index.help?lang=ko">고객센터</a>
+        <br>
+        
+        <h5><img src="../images/naver.png" alt="네이버" width="50">_Copyrighht NAVER Corp All Right Reserved.</h5>
+    </div>
+</div>
+</body>
+</html>

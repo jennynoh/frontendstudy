@@ -1,0 +1,63 @@
+.header {
+    text-align: center;
+    padding: 80px 0;
+}
+
+.header>h1>a>img {
+    height: 40px;
+}
+
+.content {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    background-color: #f1f1f1;
+}
+
+.content ul>li {
+    margin: 20px 0;
+}
+
+.content ul>li>label {
+    /* display: 인라인 <-> 블록 */
+    /* 데이터를 아래로 붙이기 */
+    display: inline-block;
+    width: 200px;
+}
+
+.content ul>li>select,
+.content ul>li>input,
+/*check 클래스가 아닌 input*/
+.content ul>li input:not(.check) {
+    margin: 10px 0;
+    padding: 10px 0;
+    width: 200px;
+}
+
+.content .buttonWrap>input {
+    display: block;
+    background-color: #03c75a;
+    color: white;
+    border-radius: 5px;
+    border: inherit;
+    width: 250px;
+    text-align: center;
+    font-size: 17px;
+    padding: 15px;
+    font-weight: bold;
+    margin: 50px auto;
+}
+
+
+.footer {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.footer li {
+    margin: 10px;
+}
+
+.footer li span {
+    line-height: 20px;
+}

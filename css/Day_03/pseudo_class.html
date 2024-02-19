@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상 클래스 선택자</title>
+    <style>
+        a {text-decoration: none;} /* 기본 underline 제거 */ 
+        a:visited { color: blue; } /* visited 가 hover 아래에 있으면 hover해도 blue 색*/
+        a:link { color: #638ecb; }
+        a:hover, p:hover {
+            color: #F0F3FA;
+            background-color: #638ecb;
+            font-size: 1.2em;
+        }
+        a:active { color: yellow}
+
+        
+    </style>
+</head>
+<body>
+    <h2>가상 클래스 선택자</h2>
+    <p>
+        선택자 뒤에 콜론(:)을 붙여 특별한 상태에 따라 동작하도록 합니다. <br>
+        :link, :hover, :active, :visited, :focus
+    </p>
+
+    <div>
+        <a href="http://naver.com">네이버로 이동</a>
+    </div> <br>
+
+    <h3>가상 선택자</h3>
+    <p class="one"></p> p태그 - 1</p>
+    <p class="one"> p태그 - 2</p>
+</body>
+</html>

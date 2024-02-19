@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기타 선택자</title>
+    <style>
+        p {
+            color: blueviolet;
+        }
+        p.odd {
+            background-color: bisque;
+        }
+
+        /* .odd가 아닌 요소를 선택해서 글꾤을 Time New Roman체로 수정하시오. */
+        :not(p.odd) {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 1.2em;
+        }
+
+        span {
+            font-size: 1.5em;
+        }
+        
+        span:nth-child(even) {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h3>기타 선택자</h3>
+    <p class="odd">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+        Quisquam ullam cum quia veritatis! Nemo reprehenderit impedit 
+        laborum consectetur error soluta! Doloremque vel nisi quae 
+        voluptates rem voluptatum enim aliquid amet?
+    </p>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+        Quisquam ullam cum quia veritatis! Nemo reprehenderit impedit 
+        laborum consectetur error soluta! Doloremque vel nisi quae 
+        voluptates rem voluptatum enim aliquid amet?
+    </p>
+    <p class="odd">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+        Quisquam ullam cum quia veritatis! Nemo reprehenderit impedit 
+        laborum consectetur error soluta! Doloremque vel nisi quae 
+        voluptates rem voluptatum enim aliquid amet?
+    </p>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+        Quisquam ullam cum quia veritatis! Nemo reprehenderit impedit 
+        laborum consectetur error soluta! Doloremque vel nisi quae 
+        voluptates rem voluptatum enim aliquid amet?
+    </p>
+
+    <div>
+        <span>1</span>&nbsp;&nbsp;
+        <span>2</span>&nbsp;&nbsp;
+        <span>3</span>&nbsp;&nbsp;
+        <span>4</span>&nbsp;&nbsp;
+        <span>5</span>&nbsp;&nbsp;
+        <span>6</span>
+    </div>
+</body>
+</html>

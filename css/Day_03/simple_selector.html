@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>단순 선택자의 사용 예</title>
+    <style>
+        * {
+            font-family: 'Times New Roman', Times, serif;
+            color: #395886;
+        }
+
+        /*구체적
+        다*/
+        p.one {
+            background-color: #B1C9EF;
+        }
+
+        .test {
+            background-color: #EEEC8C;
+        }
+
+        /*아이디 선택: #*/
+        #two {
+            font-size: 2em;
+        }
+
+        .three,
+        #two {
+            color: #F0F3FA;
+            background-color: #252525;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>단순 선택자의 사용 예</h2>
+    <h3>태그 선택자, 그룹 선택자, 클래스 선택자, id 선택자</h3>
+
+    <p class="one">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum delectus esse, porro fuga illum temporibus provident harum, a dolorum quas magni sed ipsum rem tempora voluptate consectetur, eum at tempore.
+    </p>
+
+    <p class="three">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum delectus esse, porro fuga illum temporibus provident harum, a dolorum quas magni sed ipsum rem tempora voluptate consectetur, eum at tempore.
+    </p>
+
+    <!--클래스 값은 띄어쓰기로 구분된 하나 이상의 값을 줄 수 있음-->
+    <p class="one test"> 
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum delectus esse, porro fuga illum temporibus provident harum, a dolorum quas magni sed ipsum rem tempora voluptate consectetur, eum at tempore.
+    </p>
+
+    <p id="two">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum delectus esse, porro fuga illum temporibus provident harum, a dolorum quas magni sed ipsum rem tempora voluptate consectetur, eum at tempore.
+    </p>
+</body>
+</html>

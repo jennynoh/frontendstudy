@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>링크를 표기하는 태그</title>
+    <style>
+        a {
+            text-decoration: none;
+            color: #638ECB;
+        }
+        a:hover {
+            background-color: #eee;
+            color: darkred;
+            font-weight: bold;
+        }
+        a:link { color: #638ECB;}
+        a:active {color: yellow; font-weight: bold;}
+        a:visited {color: blue;}
+    </style>
+    <!--visited session 종료 기준???-->
+
+    
+</head>
+<body>
+    <h2>&lt;a&gt; 태그 - 링크를 표기하는 태그</h2>
+    <p>
+        링크를 만드는 태그 &lt;a&gt; 태그는 클릭하면 연결된 곳으로 이동하는 태그입니다. <br>
+        텍스트를 안에 넣으면 해당 텍스트가 웹 상에 표시되고, 클릭했을 때 삽입된 링크로 이동합니다. <br>
+        텍스트 대신 이미지를 넣어 링크를 삽입할 수도 있습니다.  
+    </p>
+
+    <h4 id="section1">a 태그의 중요 속성</h4>
+    <ul>
+        <li>href: 링크를 생성해서 이동할 목적지의 파일이나 웹 문서상의 다른 주소</li>
+        <li>target: 링크의 내용이 표시될 위치
+            <ul>
+                <li>_self: 현재 창에 바로 열림 (default)</li>
+                <li>_blank: 새로운 창에 열림</li>
+                <li>사용자 지정 이름: 사용자가 지정한 이름의 창으로 열리고, 없으면 새 창으로 열림</li>
+            </ul>
+        </li>
+    </ul>
+    <hr>
+    <h4 id="section2">텍스트 링크</h4>
+    <ul>
+        <li><a href="http://naver.com">네이버</a></li>
+        <li><a href="http://google.co.kr" target="_blank">구글</a></li>
+        <li><a href="http://daum.net" target="mywin">다음</a></li>
+    </ul>
+    <hr>
+    <h4 id="section3">이미지 링크</h4>
+    <ul class="no_dot">
+        <li>
+            <a href="https://webtoon.kakao.com/content/%EC%97%BC%EB%9D%BC%EB%A5%BC-%EC%9C%84%ED%95%9C-%EC%95%88%EB%82%B4/3955" target="_blank">
+                <img src="https://kr-a.kakaopagecdn.com/P/C/3955/c2/2x/d41bbedc-4ba1-4ce3-b70a-ba8353f9a169.webp" alt="염라를 위한 안내" width="150">
+            </a><br>
+            <strong>염라를 위한 안내</strong>
+        </li>
+        <li>
+            <a href="https://webtoon.kakao.com/content/%EA%B2%BD%EC%9D%B4%EB%A1%9C%EC%9A%B4-%EC%86%8C%EB%AC%B8/1525" target="_blank">
+                <img src="https://kr-a.kakaopagecdn.com/P/C/1525/c2/2x/509913ad-ca2c-4bc9-8c7f-f133bb53464d.webp" alt="경이로운 소문" width="150">
+            </a> <br>
+            <strong>경이로운 소문</strong>
+        </li>
+    </ul>
+    <hr>
+    <h4>문서 내 특정 위치로 이동</h4>
+    <p>
+        href 속성값으로 특정 문서의 위치로 이동하기 위해서는 글로벌 속성인 id를 지정하고 <br>
+        해당 아이디가 적용된 요소를 &lt;a&gt;태그의 href로 지정하면 클릭 시 해당 아이디의  위치를 브라우저 상단에 놓습니다.
+    </p>
+    <ul>
+        <li><a href="#section1">a 태그의 중요속성</a></li>
+        <li><a href="#section2">텍스트 링크</a></li>
+        <li><a href="#section3">이미지 링크</a></li>
+    </ul>
+</body>
+</html>

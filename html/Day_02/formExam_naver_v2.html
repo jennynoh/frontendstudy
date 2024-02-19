@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원 가입</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/formExam.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1>
+            <a href="http://naver.com">
+                <img src="../images/naver.png" alt="naver로고">
+            </a>
+        </h1>
+    </div>
+    <div class="content">
+        <form action="" method="post">
+            <ul>
+                <li>
+                    <label for="">아이디</label>
+                    <input type="text" placeholder="@naver.com" required>
+                </li>
+                <li>
+                    <label for="">비밀번호</label>
+                    <input type="password" placeholder="비밀번호 입력" required>
+                </li>
+                <li>
+                    <label for="">비밀번호 재확인</label>
+                    <input type="password" placeholder="비밀번호 재입력" required>
+                </li>
+                <li>
+                    <label for="">이름</label>
+                    <input type="text" placeholder="이름 입력" required>
+                </li>
+                <li>
+                    <label for="">생년월일</label>
+                    <input type="number" placeholder="년(4자)" required>
+                    <select name="" id="" required>
+                        <option value="" selected>월</option>
+                        <option value="">1월</option>
+                        <option value="">2월</option>
+                        <option value="">3월</option>
+                        <option value="">4월</option>
+                        <option value="">5월</option>
+                        <option value="">6월</option>
+                        <option value="">7월</option>
+                        <option value="">8월</option>
+                        <option value="">9월</option>
+                        <option value="">10월</option>
+                        <option value="">11월</option>
+                        <option value="">12월</option>
+                    </select>
+                    <input type="number" placeholder="일" required>
+                </li>
+                <li>
+                    <label for="">성별</label>
+                        <input type="radio" name="gender" value="">남성 &nbsp;
+                        <input type="radio" name="gender" value="">여성
+                <!-- 선택사항은 required 처리 X -->
+                </li>
+                <li>
+                    <label for="">본인 확인 이메일(선택)</label>
+                    <input type="email" placeholder="선택입력">
+                </li>
+                <li>
+                    <label for="">휴대전화</label>
+                    <select name="" id="" required>
+                        <option value="">대한민국 +82</option>
+                        <option value="">홍콩 +852</option>
+                        <option value="">싱가포르 +65</option>
+                    </select>
+                    <input type="tel" placeholder="" required>
+                    <input type="button" value="인증번호 받기" required>
+                </li>
+                <li>
+                    <!--css 칸 벌리기 위해서 만든 label-->
+                    <label for=""></label>
+                    <input type="text" placeholder="인증번호 입력하세요" required>
+                </li>
+                <li>
+                    <span id="">
+                        <input class="check" type="checkbox" required>
+                        개인정보 수집 및 이용 동의
+                    </span>
+                </li>
+            </ul>
+            <div class="buttonWrap">
+                <input type="submit" value="가입하기">
+            </div>
+        </form>
+    </div>
+    <div class="footer">
+        <ul>
+            <li>
+                <a href="">이용약관</a>
+                <a href=""><b>개인정보처리방침</b></a>
+                <a href="">책임의 한계와 법적고지</a>
+                <a href="">회원정보 고객센터</a>
+            </li>
+            <li>
+                <a href="http://naver.com">
+                    <img src="../images/naver.png" alt="naver로고" height="20px">
+                </a>
+                <span>
+                    Copyright <b>NAVER Corp.</b> All Right Reserved.
+                </span>
+            </li>
+        </ul>
+    </div>
+
+</body>
+
+</html>

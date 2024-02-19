@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>속성 선택자의 사용 예</title>
+    <style>
+        input[type="text"],
+        input[type="email"],
+        input[type="phone"] {
+            width: 100px;
+            /* 움직임을 자연스럽게 해주는 요소 */
+            /* -webkit-transition: width .35s ease-in-out; */
+            transition: width .35s ease-in-out;
+        }
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="phone"]:focus {
+            width: 250px;
+            height: 25px;
+        }
+        input:focus {
+            border: #638ecb;
+            background-color: #8AAEE0;
+        }
+        </style>
+</head>
+<body>
+    <h2>속성 선택자의 사용 예</h2>
+    <h1>The width Property</h1>
+
+    <p>Set the width of the input field to 100 pixels. 
+        However, when the input field gets focus, make it 250 pixels wide:</p>
+    Search: <input type="text" name="search">
+
+    <p>
+        인풋 상자를 3개 생성한 후 마우스로 포커스를 넣으면 (탭 키) input 상자의 테두리와 배경 색이 바뀌도로 하시오.
+    </p>
+
+    <input type="text" placeholder="이름 입력">
+    <input type="phone" placeholder="전화번호 입력">
+    <input type="email" placeholder="이메일 입력">
+</body>
+</html>

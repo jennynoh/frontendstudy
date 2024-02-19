@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>색상 사용 예</title>
+    <style>
+        div>span {
+            font-size: 2em;
+            font-weight: 900;
+            color: #252525;
+            /* alpha 값은 0에 가까울 수록 투명, 1에 가까울수록 불투명 */
+            /* 공지창에서 background */
+            text-shadow: 5px 5px 5px rgba(100, 200, 200, 0.5);
+        }
+        div.box {
+            float: left;
+            width: 150px;
+            height: 130px;
+            box-shadow: 5px 5px 5px rgba(50, 50, 50, 0.5);
+            /* 상하좌우 바깥여백이 10px씩 적용됨 */
+            /* 상하 여백은 중복될 경우 상쇄됨 */
+            /* margin: a b c d; 12시 방향으로부터 시계방향
+               margin: a b c; a: 상하, b, c: 좌우
+               margin: a b; a: 상하, b: 좌우 */
+            margin: 10px; 
+        }
+
+        div.item1 {
+            background-color: pink;
+        }
+
+        div.item2 {
+            background-color: rgba(100, 200, 250, 0.6);
+        }
+
+        div.item3 {
+            background-color: #EECC8C;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span>HTML</span> &nbsp;
+        <span>CSS</span>&nbsp;
+        <span>JAVASCRIPT</span>
+    </div>
+    <hr>
+    <div>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>
+            Unde eum itaque similique, possimus aut vel optio omnis <br>
+            asperiores aperiam alias reiciendis libero repellat nemo praesentium <br>
+            quo expedita reprehenderit modi nihil.
+        </p>
+    </div>
+    <!--div 태그에는 가로-세로 사이즈를 넣을 수 있다-->
+    <div class="box item1"></div>
+    <div class="box item2"></div>
+    <div class="box item3"></div>
+</body>
+</html>

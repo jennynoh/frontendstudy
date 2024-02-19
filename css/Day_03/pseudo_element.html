@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상요소 선택자 사용 예</title>
+    <style>
+        p.one::first-letter {
+            color: #ff0000;
+            font-size: x-large;
+        }
+
+        p.two::first-line {
+            color: #00ff00;
+        }
+
+        p::selection {
+            color: white;
+            background-color: #252525;
+        }
+
+        p.three::before {
+            content: "하하하하하하";
+        }
+
+        p.four::after {
+            content: url(../images/bullet.png);
+        }
+    </style>
+</head>
+<body>
+    <p class="one">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+        Quidem velit, tempore natus nam vitae dignissimos provident 
+        aspernatur accusamus dolores non voluptatum officiis sequi 
+        rerum eveniet culpa ad eum necessitatibus voluptas.
+    </p>
+
+    <p class="two">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+        Quidem velit, tempore natus nam vitae dignissimos provident 
+        aspernatur accusamus dolores non voluptatum officiis sequi 
+        rerum eveniet culpa ad eum necessitatibus voluptas.
+    </p>
+
+    <p class="three">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+        Quidem velit, tempore natus nam vitae dignissimos provident 
+        aspernatur accusamus dolores non voluptatum officiis sequi 
+        rerum eveniet culpa ad eum necessitatibus voluptas.
+    </p>
+
+    <p class="four">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+        Quidem velit, tempore natus nam vitae dignissimos provident 
+        aspernatur accusamus dolores non voluptatum officiis sequi 
+        rerum eveniet culpa ad eum necessitatibus voluptas.
+    </p>
+</body>
+</html>

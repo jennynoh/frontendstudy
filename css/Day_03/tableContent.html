@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블 컨텐츠에 CSS 적용하기</title>
+    <!--어떤 태그에 스타일을 적용할건지 지명 = selector -->
+    <style>
+        table {
+            border: 2px solid #333;
+            border-collapse: collapse;
+        }
+        table thead {
+            background-color: #eee;
+        }
+        table th,
+        table td {
+            border: 1px solid #eee;
+            padding: 10px;
+        }
+        /* table tbody>tr:hover */
+        tr.body:hover {
+            color: #F0F3FA;
+            background-color: #252525;
+            font-size: 1.2em;
+        }
+
+
+    </style>
+    
+</head>
+<body>
+    <h2>테이블 컨텐츠에 CSS 적용하기</h2>
+    <p>테이블의 특정 레코드에 마우스를 올리면 그 줄 전체 배경 색상을 변경합니다.</p>
+
+    <table border="1">
+        <caption>표의 제목</caption>
+        <thead>
+            <tr>
+                <th>제목셀1</th> <!--제목셀-->
+                <th>제목셀2</th>
+                <th>제목셀3</th>
+                <th>제목셀4</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="body">
+                <td>본문 11</td>
+                <td>본문 12</td>
+                <td>본문 13</td>
+                <td>본문 14</td>
+            </tr>
+            <tr class="body">
+                <td>본문 21</td>
+                <td>본문 22</td>
+                <td>본문 23</td>
+                <td>본문 24</td>
+            </tr>
+            <tr class="body">
+                <td>본문 31</td>
+                <td>본문 32</td>
+                <td>본문 33</td>
+                <td>본문 34</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

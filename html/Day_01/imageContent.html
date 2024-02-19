@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지를 표기하는 태그</title>
+</head>
+<body>
+    <h2>이미지를 표기하는 태그</h2>
+    <p>
+        img 태그는 종료태그가 없는 open tag입니다. <br>
+        이미지의 크기는 img 태그의 속성인 width, height를 이용해 지정할 수 있으나<br>
+        css의 속성을 이용해 수정하는 방법이 권장된다. <br>
+        alt 속성은 이미지를 볼 수 없는 환경 (네트워크 문제 등)에서 이미지의 정보를 출력할 때 사용합니다.
+    </p>
+    <div>
+        <img src="../images/pic1.jpg" alt="숲" height="400px">
+        <img src="../images/pic2.jpg" alt="강아지" height="400px">
+        <img src="https://cdn.pixabay.com/photo/2014/11/30/14/11/cat-551554_1280.jpg" alt="고양이" height="400">
+    </div>
+
+    <h3>경로 (path)</h3>
+    <ol>
+        <li>
+            <h4>상대경로: 현재 문서를 기준으로 만들어지는 경로</h4>
+            <ul>
+                <li> . : 현재 위치</li>
+                <li> .. : 상위 위치</li>
+            </ul>
+        </li>
+        <li>
+            <h4>절대경로: 특정 기준점을 기준으로 만들어지는 경로</h4>
+            <ul>
+                <li> 네이버: https://naver.com</li>
+                <li> dir: /Users/jaeeunjennynoh/Desktop/DIMA3_web/frontend/frontendstudy/index.html</li>
+            </ul>
+        </li>
+    </ol>
+    <hr>
+    <h3>이미지에 설명을 함께 표시하기</h3>
+    <figure>
+        <img src="https://cdn.pixabay.com/photo/2023/12/04/15/30/monkey-8429737_1280.jpg" alt="원숭이" height="400">
+        <figcaption>사나운 원숭이가 나무위에 앉아있네요. 조심하세요.</figcaption>
+    </figure>
+    <hr>
+
+    <h3>svg 이미지</h3>
+    <p>
+        <img src="../images/face.svg" alt="멋진사람" width="300px">
+    </p>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form 컨텐츠</title>
+</head>
+<body>  
+    <form action="" method="post" enctype="multipart/form-data">
+        <div class="content">
+            <div class="header">
+                <h2>사용자의 정보를 입력받는 태그</h2>
+                <p>
+                    form 요소는 사용자의 데이터를 입력받는 요소들을 의미합니다. <br>
+                    form 요소의 대부분은 인라인 요소입니다. <br>
+                    회원가입 화면, 로그인 화면, 회원정보 수정화면, 검색창 등이 모두 form 관련 태그로 구성됩니다.
+                </p>
+            </div>
+            <div class="article">
+                <h3>input 태그 중 입력상자: type="text", type="password", type="hidden"</h3>
+                <fieldset>
+                    <legend>사용자 입력</legend>
+                    <!--label for 값과 input id값이 같아야 동일하게 인식됨-->
+                    <label for="userid">User Id : </label>
+                    <input type="text" name="userid" maxlength="15" id="userid" placeholder="아이디를 입력해주세요.">
+
+                    <label for="userpwd">Password : </label>
+                    <input type="password" name="userpwd" maxlength="15" id="userpwd" placeholder="비밀번호를 입력해주세요.">
+
+                    <!--name: 서버쪽에서 받는 변수명-->
+                    <input type="hidden" name="hiddenData" value="서버로 전달되는 데이터">
+                    
+                    <label for="pic">사진첨부</label>
+                    <input type="file" name="pic" id="pic">
+                </fieldset>
+            </div>
+            <div class="article">
+                <h3>type="radio" : 여러 항목 중 한가지만 선택 (Radio Button)</h3>
+                <fieldset>
+                    <legend>Location</legend>
+                    <!--name 속성을 같은 이름으로 설정해야 같은 그룹이 된다.-->
+                    <!--checked: 초기 선택된 값-->
+                    <input type="radio" name="location" checked="checked"> 더큰집
+                    <input type="radio" name="location"> 광교 앨리웨이
+                    <input type="radio" name="location"> 인천국제공항
+                    <input type="radio" name="location"> 트레이드타워
+                </fieldset>
+
+                <h3>select / option : 여러 항목 중 하나 선택</h3>
+                <fieldset>
+                    <legend>결제방식</legend>
+                    <select name="payment" id="">
+                        <optgroup>
+                            <option value="tosspay">토스페이</option>
+                            <option value="kakaopay">카카오페이</option>
+                            <option value="naverpay">네이버페이</option>
+                        </optgroup>
+                        <optgroup>
+                            <option value="lottecard">롯데카드</option>
+                            <option value="wooricard">우리카드</option>
+                            <option value="sinhancard">신한카드</option>
+                            <option value="samsungcard">삼성카드</option>
+                            <option value="hyundaicard">현대카드</option>
+                        </optgroup>
+                    </select>
+                    <select name="installment" id="">
+                        <optgroup>
+                            <option value="lumpsum">일시불</option>
+                            <option value="split2m">2개월할부</option>
+                            <option value="split3m">3개월할부</option>
+                        </optgroup>
+                    </select>
+                </fieldset>
+            </div>
+
+            <div class="article">
+                <h3>type="checkbox" : 여러 항목 중 여러개 선택</h3>
+                <fieldset>
+                    <!--서버사이드: 배열로 받음-->
+                    <legend>추가메뉴(옵션)</legend>
+                    <input type="checkbox" name="sidemenu" id="" value="chips" checked="checked">감자튀김 &nbsp;
+                    <input type="checkbox" name="sidemenu" id="" value="onigiri">주먹밥 &nbsp;
+                    <input type="checkbox" name="sidemenu" id="" value="friedsweetpotato">고구마튀김 &nbsp;
+                    <input type="checkbox" name="sidemenu" id="" value="allbap">날치알밥 &nbsp;
+                    <input type="checkbox" name="sidemenu" id="" value="coolpeace">쿨피스 &nbsp;
+                </fieldset>
+
+                <h3>select / option : multiple 속성을 이용해서 여러 개 선택 가능</h3>
+                <fieldset>
+                    <select name="installment2" multiple="multiple">
+                        <optgroup>
+                            <option value="lumpsum">일시불</option>
+                            <option value="split2m">2개월할부</option>
+                            <option value="split3m">3개월할부</option>
+                        </optgroup>
+                    </select>
+                </fieldset>
+            </div>
+
+            <div class="article">
+                <h3>textarea : 여러 줄 글 상자</h3>
+                <label for="reason">반품사유</label>
+                <!--시작 태그와 끝 태그를 붙여써야함-->
+                <textarea name="" id="reason" cols="50" rows="10" placeholder="반품사유를 입력하세요 (최대 500자)"></textarea>
+            </div>
+
+            <div class="buttongroup">
+                <input type="button" value="button">
+                <input type="submit" value="submit">
+                <input type="reset" value="reset">
+            </div>
+        </div>
+        <ul>
+            <h4>input type의 속성: input 태그의 성격을 정의한다.</h4>
+            <li>type="text" : 한 줄짜리 텍스트를 입력하기 위한 용도</li>
+            <li>type="password" : 비밀번호 등 외부에 노출되면 안되는 정보를 입력하기 위한 용도</li>
+            <li>
+                type="hidden" : 사용자에게 보이지 않지만 서버로 데이터를 전송시키는 필드 
+                (*value, name 지정 필수)
+            </li>
+            <li>
+                type="button" : 버튼 모양을 생성.
+                javascript와 연동하여 기능 붙임
+            </li>
+            <li>type="submit" : form action 속성에 지정한 URL(or 서버 프로그램 경로)로 데이터 전송</li>
+            <li>type="reset" : 입력필드에 입력한 값을 초기화</li>
+            <li>
+                type="file" : 파일을 서버에 첨부해서 전송하기 위한 버튼
+                (*form 태그 method="post", multipart/form-data 속성 추가 필수)
+            </li>
+        </ul>
+    </form>
+</body>
+</html>
