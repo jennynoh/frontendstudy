@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float</title>
+    <style>
+        div {
+            width: 150px;
+            height: 150px;
+            background-color: coral;
+            border: 1px solid gray;
+        }
+        div.item {
+            float: left;
+            margin-left: 10px;
+        }
+        div.three {
+            /* float의 지정에 따라가지 않음 (left, right, both) */
+            clear: left;
+            float: right; /* 혼자만 오른쪽으로 이동 */
+        }
+        p {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <h2>Float을 이용한 배치</h2>
+    <div class="item one">하나</div>
+    <div class="item two">둘</div>
+    <div class="item three">셋</div>
+    <div class="item four">넷</div>
+    <div class="item five">다섯</div>
+    
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis distinctio velit aliquam ipsum, possimus obcaecati adipisci eius tempora vitae ab est, harum nobis. Fuga qui quod aliquid accusamus accusantium natus.
+    </p>
+</body>
+</html>

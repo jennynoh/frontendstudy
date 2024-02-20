@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky</title>
+    <style>
+        /* 본문 영역에 세로 스크롤 생성 */
+        div.container {
+            padding-bottom: 2000px;
+        }
+        /* 검색창 영역 */
+        div.search {
+            margin: 0 auto;
+            background-color: white;
+            width: 500px;
+            height: 50px;
+            border-radius: 25px;
+            box-shadow: 5px 5px 5px 5px gray;
+            padding-left: 20px;
+        }
+
+        input[type="text"] {
+            display: inline-block;
+            height: 20px;
+            width: 400px;
+            padding: 5px;
+            margin-left: 20px;
+            margin-top: 10px;
+            border: none;
+            outline: none;
+        }
+
+        /* Sticky 설정 */
+        div.sticky {
+            position: sticky;
+            height: 80px;
+            top: 0px;
+            padding: 20px 5px 5px 5px;
+            /* background-color: rgba(135, 206, 235, 0.6); */
+        }
+
+    </style>
+</head>
+<body>
+    <h2>Position Sticky</h2>
+    <!-- Sticky 영역 -->
+    <div class="sticky">
+        <div class="search">
+            <input type="text" class="text" placeholder="검색어를 입력하세요.">
+        </div>
+    </div>
+
+    <!-- 본문 영역 -->
+    <div class="container">
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+            Molestiae possimus impedit alias, quis eos temporibus, labore 
+            sequi fuga distinctio assumenda, voluptates rem exercitationem. 
+            Sed totam beatae pariatur qui dolorem! Repudiandae.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+            Molestiae possimus impedit alias, quis eos temporibus, labore 
+            sequi fuga distinctio assumenda, voluptates rem exercitationem. 
+            Sed totam beatae pariatur qui dolorem! Repudiandae.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+            Molestiae possimus impedit alias, quis eos temporibus, labore 
+            sequi fuga distinctio assumenda, voluptates rem exercitationem. 
+            Sed totam beatae pariatur qui dolorem! Repudiandae.
+        </p>
+    </div>
+</body>
+</html>

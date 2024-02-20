@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <style>
+        div {
+            width: 150px;
+            height: 150px;
+            background-color: aqua;
+            border: 1px solid gray;
+        }
+        div.one {
+            position: relative; /* 기본값: static, relative: 형제들에게 영향을 주지 않고 이동 가능*/
+            background-color: rgb(39, 219, 144);
+            top: 50px;
+            left: 50px;
+        }
+
+        div.three {
+            position: relative; 
+            /* 기본값: static, relative: 형제들에게 영향을 주지 않고 이동 가능*/
+            /* relative: 원래 자기자리 기준으로 움직음 */
+            background-color: pink;
+            top: 50px;
+            left: 50px;
+        }
+
+        div.two {
+            /* 뒤에오는 형제들이 원래 position을 대체한다. */
+            /* position absolute: 브라우저 기준, 여백 무시 */
+            position: absolute;  
+            background-color: yellow;
+            top: 50px;
+            left: 50px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h2>Position을 이용한 배치</h2>
+    <div class="item one">하나</div>
+    <div class="item two">둘</div>
+    <div class="item three">셋</div>
+    <div class="item four">넷</div>
+    <div class="item five">다섯</div>
+    
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis distinctio velit aliquam ipsum, possimus obcaecati adipisci eius tempora vitae ab est, harum nobis. Fuga qui quod aliquid accusamus accusantium natus.
+    </p>
+</body>
+</html>

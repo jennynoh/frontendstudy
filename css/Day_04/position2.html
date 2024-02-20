@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position2</title>
+    <style>
+        .parent {
+            border: 1px dashed #aaa;
+            padding: 10px;
+            position: relative;
+        }
+
+        .sibling {
+            background-color: skyblue;
+            padding: 5px;
+            text-align: center;
+        }
+
+        .second {
+            width: 100px;
+            height: 100px;
+            background-color: tomato;
+        }
+        /* Position 수정부분 */
+        .static {
+            /* position이 static이면 top, left, right, bottom 적용 안됨 */
+            position: static;
+            top: 20px;
+            left: 20px;
+        }
+
+        .relative {
+            /* 원래있던 자리 기준으로 움직임. 아래 태그들은 영향받지 않음 */
+            position: relative;
+            top: 20px;
+            left: 20px;
+        }
+
+        .absolute {
+            /* 상위태그 중에 aboslute, relative를 가지고있는 개체 기준으로 움직임. 부모중에 없으면 body 태그 기준으로 */
+            /* 하위 태그는 absolute 적용된 객체가 없어졌다고 인식하고 움직임 */
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        .fixed {
+            position: fixed;
+            bottom: 50%;
+            right: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Position</h2>
+    <h3>static(default)</h3>
+    <p>떠 있지 않고 붙어있는 상태. top, left, bottom, right 적용되지 않음</p>
+    <div class="parent">
+        <div class="sibling">First</div>
+        <div class="second static">Static</div>
+        <div class="sibling">Third</div>
+    </div>
+
+    <h3>relative</h3>
+    <p>원래 있던 자리 기준으로 움직임. 하위태그들은 영향받지 않음</p>
+    <div class="parent">
+        <div class="sibling">First</div>
+        <div class="second relative">Relative</div>
+        <div class="sibling">Third</div>
+    </div>
+
+    <h3>absolute</h3>
+    <p>상위 태그중 absolute, relative 속성이 적용된 개체 기준으로 움직인다. 없으면 Body 태그 (브라우저창) 기준 <br>
+    하위 태그는 absolute 개체가 사라졌다고 생각하고 움직임</p>
+    <div class="parent">
+        <div class="sibling">First</div>
+        <div class="second absolute">Absolute</div>
+        <div class="sibling">Third</div>
+    </div>
+
+    <h3>fixed</h3>
+    <p>브라우저 창 기준으로 고정되어 노출됨. 하위태그들은 fixed 개체가 사라졌다고 인식하고 붙음.</p>
+    <div class="parent">
+        <div class="sibling">First</div>
+        <div class="second fixed">Fixed</div>
+        <div class="sibling">Third</div>
+    </div>
+</body>
+</html>
