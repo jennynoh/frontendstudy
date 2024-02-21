@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수선언과 Scope</title>
+</head>
+<body>
+    <h2>변수의 선언과 Scope</h2>
+    <p>결과 at console</p>
+    <p>
+        자바스크립드는 weakly typed 언어입니다. <br>
+        Weakly typed 언어란 변수를 선언한 후 다른 타입의 데이터를 대입할 수 있는 언어입니다. <br>
+        반면 자바는 strongly typed 언어로 선언된 변수엔 동 타입의 데이터만 대입할 수 있습니다.
+    </p>
+    <hr>
+
+    <h2>Javascript Scope의 개념: local, global</h2>
+        <ol>
+            <li>지역공간에서는 글로벌 공간에 접근 가능, 반대는 불가능</li>
+            <li>지역변수는 전역변수보다 우선순위가 높다.</li>
+            <li>arrow function (화살표함수): scope의 개념이 없음</li>
+        </ol>
+
+
+    <script>
+// 1. 변수 선언문
+        // var, let, const(자바의 final 변수와 유사함)
+        var a = "스물";
+        var a = 20; // 선언 후 또 선언 -> 변수를 보호하지 못함
+        
+        let b = "서른";
+        // let b = 30; // 오류: 선언한 변수를 또 선언하지 못함
+        b = 30; // 다른 데이터 타입을 대입하는 것은 가능
+
+        const c = "마흔";
+        // c = 30;  // 오류: 값을 변경할 수 없음
+        
+
+// 2. 함수의 지역변수
+        function add(a,b) {
+            let result = a+b; // scope: 함수 내부에서만 사용가능
+            console.log("합계: "+result);
+        }
+
+        add(10, 20);
+        // console.log(result); // 오류
+
+
+// 3. for문의 지역변수 
+        let total=0;
+        for(let i=1; i<=10; ++i) {
+            total += i;
+        }
+
+        console.log("1~10까지 합계: "+total);
+        // console.log("마지막 i값: "+i); // 오류: i는 for문의 지역변수
+
+// 4. 전역변수와 지역변수의 선언 
+        // 1) 
+        let x = 20; // 전역변수여서 다시 선언 가능
+        {
+            let x = 10; // 지역변수 
+            console.log(x);
+        }
+        console.log(x);
+
+        // 2) 
+        let y = 20;
+        {
+            y = 10; // 앞에서 선언된 전역변수 
+            console.log(x);
+        }
+        console.log(y);
+
+// 5. const
+        // const는 선언과 동시에 초기화해야한다. (else 오류) 
+        const k = 20; // 단일데이터
+        const l = {x : 10, y: 20};
+        console.log(l);
+        
+        // l = {x:100, y:200}; // 오류: l은 다른 데이터를 가리킬수없음
+        l['x'] = 100;
+        console.log(l);
+
+    </script>
+</body>
+</html>

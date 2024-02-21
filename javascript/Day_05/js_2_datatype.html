@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>데이터 타입과 변수</title>
+</head>
+<body>
+    <h2 id="header">결과 at console</h2>
+    <script>
+        // 자료형 
+        // 1) 문자열: "대한민국", '대한민국', `대한민국`
+        let str = "대한민국";
+        console.log(str);
+        console.log(typeof str);
+        // back tick(`): f-string
+        console.log(`철수는 ${str} 사람입니다.`);
+
+        // 2) 숫자형: 정수, 실수 모두 포함된 숫자
+        let number = 12;
+        console.log(number);
+        console.log(typeof number);
+        console.log('나이는: '+number); // +: 문자열 결합으로 사용됨
+        console.log(number/5); // 결과: 2.4
+
+        // 3) 불리언형: true, false (0을 제외한 모든 숫자=true)
+        let bool = true;
+        console.log(typeof bool);
+        console.log(10 > 20);
+        if(1) console.log('1은 true입니다.');
+
+        // 4) 함수형
+        // 선언적 함수
+        function add(a,b) {
+            return a+b;
+        }
+
+        // 표현 함수
+        let minus = function (a,b) {
+            return a-b;
+        };
+
+        let sum = add;
+        console.log('sum의 결과: '+sum(21,11));
+
+        console.log(typeof add); // 결과: function
+        console.log(typeof minus); // 결과: function
+        console.log(`더하기 결과: ${add(10, 20)}`);
+        console.log(minus(10, 20)); // 결과: -10
+
+        // 5) 객체형: 객체의 종류 여러가지
+        // 5-1) Object
+        let obj = {name : '홍길동', age : 25};
+        console.log(typeof obj);
+        console.log(obj);
+        console.log('이름은 ' + obj['name']);
+        console.log('나이는 ' + obj.age);
+
+        // 5-2) JSON : 주로 비동기통신을 위한 데이터 타입 (js object notation)
+        // 직렬화 되어있는 객체
+        let data = {"name" : '홍길동', "age" : 25};
+        console.log(typeof data); // type: object
+        
+        // 5-3) array: 배열
+        // 2차원 배열도 가능함 (잘 쓰진 않음) [행][열]
+        let ary = [2,4,6,8];
+        console.log(typeof ary); // type: object
+        console.log(ary);
+        console.log(ary[1]);
+
+        // 5-4) html 객체
+        // 가져온 html 객체는 값을 바꿀 수 있다.
+        let html = document.getElementById('header');
+        console.log(typeof html);
+        console.log(html);
+        // alert(html);
+        
+        // 끝 태그가 있을 경우에 값을 변경할 수 있다.
+        let h2 = html.innerHTML;
+        console.log(h2);
+        console.log(typeof h2); // type: string
+
+        html.innerHTML = "바꾼 값";
+
+        // 5-5) null 객체: 오류
+        //          변수가 아무 데이터도 가리키고 있지 않음 - JS v1부터 나온 오류
+        let temp = null;
+        console.log(typeof temp); // type: object
+        console.log(temp);
+
+        // 6) undefined
+        // 변수에 값이 존재하지 않음을 나타냄
+        // 변수를 만들고 초기화하지 않으면 undefined
+        let noInit;
+        console.log(typeof noInit); // type: undefined
+        console.log(noInit);
+
+        // 7) Symbol: 유일성 보장을 위해 사용
+        let b = Symbol();
+
+        // cf. 결과를 브라우저에 출력하기
+        document.write(typeof bool);
+
+    </script>
+</body>
+</html>
