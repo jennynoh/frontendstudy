@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float을 이용한 layout - 2</title>
+    <style>
+        /* 전체 div 태그에 속성 지정 */
+        div.section {
+            width: 600px;
+            padding: 20px;
+            margin: 20px;
+            border: 2px solid gray;
+        }
+
+        div.section>div {
+            width: 100px;
+            height: 100px;
+            background-color: #EDC258;
+            border: 1px solid gray;
+        }
+        
+        /* flex-container: 부모요소 (float left와 유사) */
+        div.parent1 {
+            display: flex; /* 자식 요소를 flex로 바꿈 */
+        }
+
+        /* flex-direction */
+        div.parent2 {
+            display: flex; /* 자식 요소를 flex로 바꿈 */
+            flex-direction: row-reverse; /* float right와 같음 */
+        }
+
+        /* justify-content */
+        div.parent3 {
+            display: flex; /* 자식 요소를 flex로 바꿈 */
+            flex-direction: row-reverse; /* float right와 같음 */
+            justify-content: flex-end;
+        }
+
+        /* align-items */
+        div.parent4 {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        div.parent4>div:nth-child(1) { height: 50px;}
+        div.parent4>div:nth-child(2){ height: 60px;}
+        div.parent4>div:nth-child(3){ height: 120px;}
+        div.parent4>div:nth-child(4){ height: 180px;}
+        div.parent4>div:nth-child(5){ height: 25px;}
+
+        /* flex-wrap 적용 */
+        div.parent5 {
+            display: flex;
+            flex-wrap: nowrap;
+        }
+    </style>
+</head>
+<body>
+    <h2>Flex을 이용한 layout</h2>
+    <h3>(1) flex을 적용한 예 1</h3>
+    <div class="parent1 section">
+        <div>Box-1</div>
+        <div>Box-2</div>
+        <div>Box-3</div>
+        <div>Box-4</div>
+        <div>Box-5</div>
+    </div>
+    <br>
+
+    <h3>(2) flex-direction: row(default), column, row-reverse, column-reverse</h3>
+    <div class="parent2 section">
+        <div>Box-1</div>
+        <div>Box-2</div>
+        <div>Box-3</div>
+        <div>Box-4</div>
+        <div>Box-5</div>
+    </div>
+
+    <h3>(3) justify-content: 좌우로 정렬방법 지정 <br>
+        - normal, flex-start, flex-end, space-between, space-around, space-evenly</h3>
+    <div class="parent3 section">
+        <div>Box-1</div>
+        <div>Box-2</div>
+        <div>Box-3</div>
+        <div>Box-4</div>
+        <div>Box-5</div>
+    </div>
+
+    <h3>(4) align-items: 크기가 다른 아이템 정렬 <br>
+        - noraml, center, flex-start, flex-end, stretch, baseline
+    </h3>
+    <div class="parent4 section">
+        <div>Box-1</div>
+        <div>Box-2</div>
+        <div>Box-3</div>
+        <div>Box-4</div>
+        <div>Box-5</div>
+    </div>
+
+    <h3>
+        (5) flex-wrap: overflow되는 content의 처리 <br>
+        - wrap (default), nowrap
+    </h3>
+    <div class="parent5 section">
+        <div>Box-1</div>
+        <div>Box-2</div>
+        <div>Box-3</div>
+        <div>Box-4</div>
+        <div>Box-5</div>
+        <div>Box-6</div>
+    </div>
+</body>
+</html>

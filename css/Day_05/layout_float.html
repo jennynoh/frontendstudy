@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float을 이용한 layout - 2</title>
+    <style>
+        /* 전체 div 태그에 속성 지정 */
+        div.section {
+            width: 600px;
+            padding: 20px;
+            margin: 20px;
+            border: 2px solid gray;
+        }
+
+        div.section>div {
+            width: 100px;
+            height: 100px;
+            background-color: #EDC258;
+            border: 1px solid gray;
+        }
+        /* parent1에 일반적인 float 속성 적용 */
+        /* 자식이 float으로 바뀌면 자식 태그를 인식하지 못한다. */
+        div.parent1 {
+            /* overflow: 자식 태그의 높이를 인식시키는 키워드 */
+            /* hidden, auto */
+            overflow: auto;
+        }
+
+        div.parent1>div {
+            float: left;
+        }
+
+        /* overflow: 부모 폭이 좁으면 자동으로 밑으로 내려감*/
+        div.parent2 {
+            width: 500px;
+            overflow: auto;
+        }
+
+        div.parent2>div {
+            float: left;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Float을 이용한 layout-2</h2>
+    <h3>(1) float을 적용한 예</h3>
+    <div class="parent1 section">
+        <div>Box-1</div>
+        <div>Box-2</div>
+        <div>Box-3</div>
+        <div>Box-4</div>
+        <div>Box-5</div>
+    </div>
+
+    <h3>(2) Float를 적용한 예</h3>
+    <div class="parent2 section">
+        <div>Box-1</div>
+        <div>Box-2</div>
+        <div>Box-3</div>
+        <div>Box-4</div>
+        <div>Box-5</div>
+    </div>
+</body>
+</html>
