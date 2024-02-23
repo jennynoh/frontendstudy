@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 실행 위치에 따른 결과</title>
+    <script defer src="./script/A03_defer.js"></script>
+</head>
+<body>
+    <h2>자바스크립트 실행 위치에 따른 결과</h2>
+    <div id="result"></div>
+
+    <p>
+        자바스크립트를 실행 시 코드가 html의 head 위치에 포함되어있을 경우 <br>
+        : html 파싱 도중에 Javascript fetch -&gt; html parsing 합니다.
+        이렇게 되면 파싱시간에 공백이 생기는 문제가 발생합니다.
+        <ul>
+            해결방법
+            <li>
+                async: html parsing과 javascript fetch 동시에 수행.
+                execute 할 때 parsing을 멈춘다.
+            </li>
+            <li>
+                defer: html parsing과 javascript fetch 동시에 수행, JS execute를 html pasing 이후로 미룬다. <br>
+                window.onload와 유사하게 동작함.
+            </li>
+        </ul> 
+    </p>
+
+</body>
+</html>
