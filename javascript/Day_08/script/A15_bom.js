@@ -16,6 +16,9 @@ btn_01.addEventListener('click', function(){
 
 btn_02.addEventListener('click', function(){
     let check = confirm("확인창을 클릭했습니다.");
+    // console.log(typeof check);
+    // console.log(check);
+
     if(check)
         result.innerHTML = '<span style="color:red">확인을 클릭했습니다.</span>';
     else
@@ -24,6 +27,9 @@ btn_02.addEventListener('click', function(){
 
 btn_03.addEventListener('click', function(){
     let data = prompt("이름을 입력하세요.");
+    // console.log(typeof data);
+    // console.log(data);
+
     result.innerHTML = `<span style="color:blue">당신의 이름은 ${data}입니다.</span>`
 });
 

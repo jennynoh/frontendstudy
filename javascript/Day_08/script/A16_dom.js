@@ -44,11 +44,11 @@ console.log(poem3.length); // 2
 document.getElementById("change").addEventListener('mouseenter', function(){
     // let alt = document.getElementById("image").getAttribute('alt');
     // alert(alt);
-    document.getElementById('image').setAttribute('src', './images/flower.jpg')
+    document.getElementById('image').setAttribute('src', '../images/face1.png')
 });
 
 document.getElementById('change').addEventListener('mouseleave', function(){
     document.getElementById('change', function() {
-        document.getElementById('image').setAttribute('src', './images/oguri.jpg')
+        document.getElementById('image').setAttribute('src', '../images/oguri.jpeg')
     })
 })

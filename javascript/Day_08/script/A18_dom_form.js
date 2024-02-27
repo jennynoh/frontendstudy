@@ -8,13 +8,13 @@ function calcBMI() {
 
     if(height.trim().length == 0 || isNaN(height.trim())) {
         alert("키를 정확하게 입력해 주세요.");
-        height.select();
+        height.select(); // ??
         return;
     }
 
     if(weight.trim().length ==0 || isNaN(weight.trim())){
         alert("몸무게를 정확하게 입력해 주세요.");
-        weight.select();
+        weight.select(); // ??
         return;
     }
 
@@ -29,14 +29,14 @@ let language = document.getElementById('language');
 let calcResult = document.getElementById('calcResult');
 let target2 = document.getElementById('target2');
 
-// button event
+// button event: button click해야 결과 출력
 calcResult.addEventListener('click', function(){
     let value = language.value;
     let result = `선택한 기술스택은 ${value}입니다.`;
     target2.innerHTML = result;
 })
 
-// select event
+// select event: select 하면 바로 띄워줌
 language.addEventListener('change', function(){
     let value = this.value;
     let result = `선택한 기술스택은 ${value}입니다.`;
