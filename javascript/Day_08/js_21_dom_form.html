@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM - form에 접근하기</title>
     <script defer src="./script/A18_dom_form.js"></script>
+    <style>
+        input[type='text'] {
+            text-align: right;
+        }
+    </style>
 </head>
 <body>
     <h2>Form에 접근하기</h2>
@@ -32,19 +37,63 @@
     </div><br>
     <hr><br>
 
-    <h2> (3) 연습문제 </h2>
+    <h3> (3) 계산기 </h3>
+    <div>
+        <input type="text" id="num1" placeholder="숫자를 입력하세요.">
+        <select name="" id="operator">
+            <option value="+"> + </option>
+            <option value="-"> - </option>
+            <option value="*"> * </option>
+            <option value="/"> ÷ </option>
+        </select>
 
-    <input type="text" id="num1" placeholder="숫자를 입력하세요.">
-    <select name="" id="operator">
-        <option value="+"> + </option>
-        <option value="-"> - </option>
-        <option value="*"> * </option>
-        <option value="/"> ÷ </option>
-    </select>
+        <input type="text" id="num2" placeholder="숫자를 입력하세요.">
+        <input type="button" id="equal" value="=">
+        <input type="text" id="resultField" readonly> 
+        <input type="button" id="clear" value="clear">
 
-    <input type="text" id="num2" placeholder="숫자를 입력하세요.">
-    <input type="button" id="equal" value="=">
-    
-    <h3 id="calc_end"></h3>
+        <!-- readonly: 입력할 수 없는 input field
+        disabled: field not activated -->
+    </div><br>
+    <hr><br>
+
+    <h3> (4) radio 버튼의 값 읽어 처리하기</h3>
+    <div>
+        <!--value:선택 시 전달되는 값, 남성: 사용자가 보는 값-->
+        <input type="radio" name="gender" class="gender" value="남자">남성 &nbsp;
+        <input type="radio" name="gender" class="gender" value="여자">여성 &nbsp;
+        <input type="button" id="getResult" value="Click">
+        <h3 id="target3"></h3>
+    </div> <hr>
+
+    <h3> (5) checkbox 값 읽어 처리하기 (넷플릭스 인기 드라마-다중선택) </h3>
+    <div>
+        <input type="checkbox" name="netflix" class="netflix" value="오징어 게임" checked>오징어 게임 &nbsp;
+        <input type="checkbox" name="netflix" class="netflix" value="더글로리">더글로리 &nbsp;
+        <input type="checkbox" name="netflix" class="netflix" value="미스터선샤인">미스터선샤인 &nbsp;
+        <input type="checkbox" name="netflix" class="netflix" value="국민사형투표">국민사형투표 &nbsp;
+        <input type="checkbox" name="netflix" class="netflix" value="슬기로운 의사생활">슬기로운 의사생활 &nbsp;
+
+        <input type="button" id="getResult2" value="Click">
+        <h3 id="target4"></h3>
+    </div><hr>
+
+    <h3> (6) Textarea에 입력된 텍스트 처리 </h3>
+    <div>
+        <textarea name="" id="textbox" cols="30" rows="10"></textarea>
+        <span id="count" style="color:gray;">(0자)</span> <!--입력한 글자 수 표시-->
+        <input type="button" id="getResult3" value="Click">
+        <h3 id="target5"></h3>
+    </div><hr>
+
+    <h3> (7) 기타 입력상자 처리 </h3>
+    <div>
+        <input type="color" id="color"><br>
+        <span id="selectedColor"></span>
+        <br><br>
+        <input type="date" id="date"><br>
+        <span id="selectedDate"></span>
+    </div>
+
 </body>
 </html>

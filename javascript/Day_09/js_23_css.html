@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript로 CSS 관리하기</title>
+    <script defer src="./script/A20_css.js"></script>
+    <style>
+        div.box {
+            visibility: hidden;
+            width: 100px;
+            height: 100px;
+            background-color: #B4E951;
+        }
+        .item {
+            width: 100px;
+            height: 100px;
+            background-color: violet;
+            transition: all 1s ease-in-out;
+        }
+        .item:hover {
+            width: 200px;
+            height: 200px;
+            /* transition: 1s */
+        }
+        .image>img {
+            opacity: 0.0;
+            width: 100px;
+            height: 100px;
+            transition: all 0.5s ease-out;
+        }
+        .image>img:hover{
+            opacity: 1.0;
+            width: 500px;
+            height: 500px;
+            rotate: 360deg;
+        }
+    </style>
+</head>
+<body>
+    <h2>Javascript CSS 관리하기</h2>
+    <div>
+        <input type="button" id="change" value="바꾸기">
+        <input type="button" id="show" value="나타내기">
+        <input type="button" id="changeColor" value="색깔바꾸기">
+        <input type="button" id="mode" value="다크모드">
+    </div>
+    <p id="song">
+        나리나리 개나리 입에따다 물고요 <br>
+        병아리떼 뿅뿅뿅 봄나들이 갑니다.
+    </p>
+    <div class="box"></div>
+    <br>
+    <h2>아래의 상자는 JS가 아닌 CSS를 이용하여 style 전환</h2>
+    <div class="item"></div>
+    <div class="image"><img src="../Day_08/images/oguri.jpeg" alt="오구리"></div>
+</body>
+</html>

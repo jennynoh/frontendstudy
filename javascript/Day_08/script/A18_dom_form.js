@@ -1,20 +1,25 @@
+/*-------------------------
+    1) Input 데이터를 읽어 결과 처리하기
+-------------------------*/
 // (1-1) - EventListener 추가
 document.getElementById('calcBMI').addEventListener('click', calcBMI);
 
 // (1-2) - calcBMI 함수 정의
 function calcBMI() {
-    let height = document.getElementById('height').value;
-    let weight = document.getElementById('weight').value;
+    let height = document.getElementById('height').value.trim();
+    let weight = document.getElementById('weight').value.trim();
+    let heightField = document.getElementById('height');
+    let weightField = document.getElementById('weight');
 
-    if(height.trim().length == 0 || isNaN(height.trim())) {
+    if(height.length == 0 || isNaN(height)) {
         alert("키를 정확하게 입력해 주세요.");
-        height.select(); // ??
+        heightField.select(); // 해당 입력필드 선택
         return;
     }
 
-    if(weight.trim().length ==0 || isNaN(weight.trim())){
+    if(weight.length ==0 || isNaN(weight)){
         alert("몸무게를 정확하게 입력해 주세요.");
-        weight.select(); // ??
+        weight.select(); // 해당 입력필드 선택
         return;
     }
 
@@ -24,7 +29,10 @@ function calcBMI() {
     document.getElementById('target1').innerHTML = result;
 }
 
-// 2) select 상자 값 읽어오기
+
+/*-------------------------
+    2) select 상자 값 읽어오기
+-------------------------*/
 let language = document.getElementById('language');
 let calcResult = document.getElementById('calcResult');
 let target2 = document.getElementById('target2');
@@ -43,33 +51,113 @@ language.addEventListener('change', function(){
     target2.innerHTML = result;
 })
 
-// 3) [연습문제]
-document.addEventListener('DOMContentLoaded', function(){
-    document.getElementById('equal').addEventListener('click', calculate);
-});
+
+/*-------------------------
+    3) 연습문제
+-------------------------*/
+// document.addEventListener('DOMContentLoaded', function(){
+//     document.getElementById('equal').addEventListener('click', calculate);
+// });
+
+document.getElementById('equal').addEventListener('click', calculate);
+document.getElementById('clear').addEventListener('click', clear);
 
 function calculate() {
-    var num1 = parseFloat(document.getElementById('num1').value);
-    var num2 = parseFloat(document.getElementById('num2').value);
-    var operator = document.getElementById('operator').value;
-    var result = 0;
+    let num1Field = document.getElementById('num1');
+    let num2Field = document.getElementById('num2');
 
+    let num1 = document.getElementById('num1').value.trim();
+    let num2 = document.getElementById('num2').value.trim();
+
+    let operator = document.getElementById('operator');
+    let resultField = document.getElementById('resultField');
+    let result = 0;
+
+    if(num1.length == 0 || isNaN(num1)){
+        alert("숫자를 정확히 입력해주세요.");
+        num1Field.select();
+        return;
+    }
+
+    if(num2.length == 0 || isNaN(num2)) {
+        alert("숫자를 정확히 입력해주새요.");
+        num2Field.select();
+        return;
+    }
+
+    // parseFloat(num1), parseFloat(num2)
     switch (operator) {
-        case '+' :
-            result = num1 + num2;
-            break;
-        case '-':
-            result = num1 - num2;
-            break;
-        case '*':
-            result = num1 * num2;
-            break;
-        case '/':
-            result = num1 / num2;
-            break;
+        case '+' : result = num1 + num2; break;
+        case '-': result = num1 - num2; break;
+        case '*': result = num1 * num2; break;
+        case '/': result = num1 / num2; break;
         default:
             result = 'Invalid Operator';
     }
 
-    document.getElementById('calc_end').innerText = `결과: ${result}`;
+    resultField.value = result;
 }
+
+function clear() {
+    document.getElementById('num1').value = '';
+    document.getElementById('num2').value = '';
+    document.getElementById('resultField').value = '';
+}
+
+
+/*-------------------------
+    4) radio button 값 처리하기
+-------------------------*/
+document.getElementById('getResult').addEventListener('click', function(){
+    // 어차피 radio 버튼은 하나만 선택할 수 있어서 
+    // let gender = document.querySelector('input[type="radio"]:checked');
+
+    // radio 버튼이 복수개일 때: 
+    let gender = document.querySelector('.gender:checked');
+    let genderTemp = gender.value;
+
+    document.getElementById('target3').innerHTML = genderTemp;
+});
+
+/*-------------------------
+    5) checkbox 값 처리하기
+-------------------------*/
+document.getElementById('getResult2').addEventListener('click', function(){
+    let series = document.querySelectorAll('.netflix:checked'); // array type
+    let seriesTemp = '';
+
+    for(let i=0; i<series.length; ++i){
+        seriesTemp += series[i].value + ' ';
+    }
+
+    document.getElementById('target4').innerHTML = seriesTemp;
+});
+
+/*-------------------------
+    6) Textarea에 입력된 값 처리
+-------------------------*/
+// 글자수 count
+// keyup: 키보드 눌렀다 떼는 event
+document.getElementById('textbox').addEventListener('keyup', function(){
+    let count = this.value.length;
+    document.getElementById('count').innerHTML = `(${count}자)`;
+});
+
+// textarea내의 글자를 읽어와서 출력
+document.getElementById('getResult3').addEventListener('click', function() {
+    let text = document.getElementById('textbox').value;
+    document.getElementById('target5').innerHTML = text;
+});
+
+/*-------------------------
+    7) 기타
+-------------------------*/
+document.getElementById('color').addEventListener('change', function(){
+    let selectedColor = document.getElementById('color').value;
+    document.getElementById('selectedColor').innerHTML = selectedColor;
+})
+
+document.getElementById('date').addEventListener('change', function(){
+    let selectedDate = document.getElementById('date').value;
+    document.getElementById('selectedDate').innerHTML = selectedDate;
+});
