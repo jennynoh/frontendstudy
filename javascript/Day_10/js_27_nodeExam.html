@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(연습문제) Node를 이용한 고객관리 프로그램</title>
+    <script defer src="./script/A24_nodeExam.js"></script>
+    <style>
+        table {
+            border: 1px solid #333;
+            border-collapse: collapse;
+            padding: 10px;
+            width: 600px;
+        }
+    </style>
+</head>
+<body>
+    <h2>(연습문제) Node를 이용한 고객관리 프로그램</h2>
+    <div class="container">
+        <form action="">
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>고객이름</th>
+                        <th>연락처(전화번호)</th>
+                        <th>이메일</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="text" id="name" placeholder="(예) 홍길동" required></td>
+                        <td><input type="text" id="phone" placeholder="(예) 01048490814" required></td>
+                        <td><input type="email" id="email" placeholder="(예) hello@gmail.com" required></td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+        <input type="submit" id="add" value="추가">
+        <br><br>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>고객이름</th>
+                    <th>연락처(전화번호)</th>
+                    <th>이메일</th>
+                </tr>
+            </thead>
+            <tbody id="addhere">
+                <tr>
+                    <td>노재은</td>
+                    <td>01048490814</td>
+                    <td>jae.eunjenny.noh@gmail.com</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

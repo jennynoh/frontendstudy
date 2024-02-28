@@ -6,7 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>종합평가 결과</title>
     <link rel="stylesheet" href="">
-    <script defer src="./script/frontendwebTest"></script>
+    <script defer src="./script/frontendwebTest.js"></script>
+    <link rel="stylesheet" href="./css/frontendwebTest.css">
+
+    <!-- 구글폰트 CDN: hahmlet, noto serif -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@100..900&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -15,38 +21,38 @@
         <ol>
             <li>
                 <span>Java Fundamental : </span>
-                <input type="text" placeholder="0"> 점
+                <input type="text" placeholder="0" class="subjectScore sub"> 점
             </li>
             <li><span>Oracle Database : </span>
-                <input type="text" placeholder="0"> 점
+                <input type="text" placeholder="0" class="subjectScore sub"> 점
             </li>
             <li>
                 <span>Web Frontend : </span>
-                <input type="text" placeholder="0"> 점
+                <input type="text" placeholder="0" class="subjectScore sub"> 점
             </li>
             <li>
                 <span>Web Backend : </span>
-                <input type="text" placeholder="0"> 점
+                <input type="text" placeholder="0" class="subjectScore sub"> 점
             </li>
             <li>
                 <span>1차 Project : </span>
-                <input type="text" placeholder="0"> 점
+                <input type="text" placeholder="0" class="subjectScore prj"> 점
             </li>
             <li>
                 <span>2차 Project: </span>
-                <input type="text" placeholder="0"> 점
+                <input type="text" placeholder="0" class="subjectScore prj"> 점
             </li>
             <li>
                 <span>출 석 률: </span>
-                <input type="text" placeholder="100"> %
+                <input type="text" placeholder="100" class="subjectScore attd"> %
             </li>
         </ol>
-        <input type="button" value="결과 확인">
+        <input type="button" value="결과 확인" id="confirm">
         <p class="msg">※ 각 과목은 10%, 프로젝트 2회 각 20%, 출석률 20%로 총 100%로 점수 환산함</p>
 
-        <div>
-            <h2># 최종 결과:</h2>&nbsp;
-            <span>종합 평가 점수: <span id="avg">0</span>점
+        <div class="finalResult">
+            <h2 id="finalTitle"># 최종 결과:</h2>
+            <span id="total">종합 평가 점수:</span><span id="avg">0</span>점
         </div>
 
     </div>

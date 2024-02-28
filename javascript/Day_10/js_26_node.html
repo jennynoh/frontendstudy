@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="./script/A23_node.js"></script>
+</head>
+<body>
+    <h2>DOM Node 접근 처리</h2>
+    <div>
+        <input type="button" id="afterbegin" value="afterbegin">
+        <input type="button" id="afterend" value="afterend">
+        <input type="button" id="beforebegin" value="beforebegin">
+        <input type="button" id="beforeend" value="beforeend">
+    </div>
+    <ul id="list">
+        <li>뼈해장국</li>
+        <li>라조기</li>
+        <li>무수분카레</li>
+    </ul>
+    <hr>
+    <p>
+        insertAdjacentHTML <br>
+        - beforeend: ul태그 안 & 맨 마지막 li <br>
+        - afterbegin: ul태그 안 & 맨 처음 li <br>
+        - afterend: ul태그 밖 & 뒤 <br>
+        - beforebegin: ul태그 밖 & 앞
+    </p>
+</body>
+</html>

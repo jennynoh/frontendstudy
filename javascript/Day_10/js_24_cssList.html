@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS list의 예</title>
+    <style>
+        .info {font-size: 1.5em;}
+        .red {color:red;}
+        .green {color:green;}
+        .blue {color:blue;}
+        .visible {visibility: hidden;}
+    </style>
+    <script defer src="./script/A21_classList.js"></script>
+</head>
+<body>
+    <h2>Class List의 예</h2>
+    <div class="btngroup">
+        <input type="button" id="get" value="클래스명 가져오기">
+        <input type="button" id="add" value="클래스 추가">
+        <input type="button" id="remove" value="클래스 삭제">
+        <input type="button" id="replace" value="클래스 교체">
+        <input type="button" id="contains" value="클래스 존재확인">
+        <input type="button" id="toggle" value="클래스 토글">
+    </div>
+    <div id="content" class="red visible">
+        자바스크립트 classList 객체 연습
+    </div>
+
+    <p id="target"></p>
+</body>
+</html>
