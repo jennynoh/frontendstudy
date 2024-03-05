@@ -1,0 +1,93 @@
+@charset "utf-8";
+
+/* 문서 전체 구글 폰트 설정: Code Here  */
+body {
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+div#container {
+    width: 1000px;
+    height: 100%;
+    font-weight: 200;
+    margin: 0 auto 20px auto;
+    text-align: center;
+    padding: 5px 20px;
+    background-color: azure;
+    /* 배경색 지정 : Code Here */
+} 
+
+div#container > h2.title {
+    margin: 20px auto;
+    font-size: 2em;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    color: #252525;
+     /* 글자색 지정 : Code Here */
+
+}
+
+div.banner {
+    float : left;
+    margin-right: 20px;
+}
+
+table#inputTable td {
+    padding : 5px;
+}
+
+table#inputTable tr th {
+    text-align : right;
+    width : 110px;
+}
+
+table#inputTable tr td {
+    text-align : left;
+}
+table#inputTable tr input[type="text"] {
+    height : 25px;
+    padding:5px;
+}
+input#address {
+    width : 350px;
+}
+input.menuqty {
+    width : 80px;
+}
+#tax, #tip, #total, .menuqty {
+    text-align : right;
+}
+
+#tip, .menuqty {
+    margin-right : 5px;
+}
+span.foodmenu {
+    display : inline-block;
+    width : 250px;
+    height: 50px;
+}
+
+div#btns{
+    margin : 20px;
+}
+
+div#btns *{
+    height: 45px;
+    width: 150px;
+    text-align : center;
+    border: none;
+    margin: 0 10px;
+    color : rgb(50, 50, 255);
+    /* 버튼 테두리 둥글게: Code here */
+    border-radius: 22.5px;
+}
+
+/* 버튼에 마우스를 올렸을 때 이벤트 처리(글자 두껍게, 테두리 그림자 생성): Code here */
+
+div#btns #order:hover,
+div#btns #cancel:hover {
+    font-weight: 900;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+}

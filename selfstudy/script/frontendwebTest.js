@@ -11,10 +11,10 @@ for(let i=0; i<score.length; ++i) {
 document.getElementById('confirm').addEventListener('click', finalResult);
 
 function scoreInput() {
-    let subjectScore = this.value;
+    let subjectScore = this.value; // this = score[i]
     if((subjectScore < 0 || subjectScore > 100) || isNaN(subjectScore)) {
         alert('쟘수를 0~100점 사이로 입력해주세요.');
-        this.select();
+        this.select(); // this = score[i]
         return;
     }
     total += parseFloat(this.value);

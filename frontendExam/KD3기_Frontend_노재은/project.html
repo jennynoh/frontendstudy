@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>야식배달</title>
+    <!-- 폰트 설정 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./style/project.css">
+    <script defer src="./script/project.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <h2 class="title">[ 맛있어요 야식배달! ]</h2>
+        <div class="content">
+            <div class="banner">
+                <!-- 
+                    임의의 이미지(가로 450px, 세로 350px) 를 다운받아 아래 그림이 들어가야 하는 위치에 넣으시오.
+                    이미지의 크기는 그림판 등으로 크기를 조정한다.
+                -->
+                <img id="img" src="./images/food.jpg" alt="야식 1위">
+            </div>
+            <div class="delivery">
+                <form id="inputForm">
+                    <table id="inputTable">
+                        <tr>
+                            <th>현재 시간 : </th>
+                            <td><input type="text" id="currTime" readonly></td>
+                        </tr>
+                        <tr>
+                            <th>주문자 이름 : </th>
+                            <td><input type="text" id="name"></td>
+                        </tr>
+                        <tr>
+                            <th>전화번호 : </th>
+                            <td><input type="text" id="phone" placeholder="예) 01011112222"></td>
+                        </tr>
+                        <tr>
+                            <th>주 소 :</th>
+                            <td><input type="text" id="address"></td>
+                        </tr>
+                        <tr>
+                            <th>야식 메뉴 : </th>
+                            <td>
+                                <span class="foodmenu">
+                                    <input type="checkbox" class="deli" value="7000" name="food"> 떡볶이(1인분
+                                    7,000원)
+                                </span>
+                                <input type="text" class="menuqty" id="deli" placeholder="0" disabled>인분<br>
+
+                                <span class="foodmenu">
+                                    <input type="checkbox" class="dongas" value="12000" name="food"> 돈까스(1인분
+                                    12,000원)
+                                </span>
+                                <input type="text" class="menuqty" id="dongas" placeholder="0" disabled>인분<br>
+
+                                <span class="foodmenu">
+                                    <input type="checkbox" class="pasta" value="15000" name="food"> 파스타 (1인분
+                                    15,000원)
+                                </span>
+                                <input type="text" class="menuqty" id="pasta" placeholder="0" disabled>인분<br>
+
+                                <span class="foodmenu">
+                                    <input type="checkbox" class="steak" value="22000" name="food"> 스테이크 (1인분
+                                    22,000원)
+                                </span>
+                                <input type="text" class="menuqty" id="steak" placeholder="0" disabled>인분 <br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>세 금 : </th>
+                            <td><input type="text" id="tax" value="0" disabled>원</td>
+                        </tr>
+                        <tr>
+                            <th>봉사료 : </th>
+                            <td><input type="text" id="tip" value="0" disabled>원</td>
+                        </tr>
+                        <tr>
+                            <th>총합계 : </th>
+                            <td><input type="text" id="total" value="0" disabled>원</td>
+                        </tr>
+
+                    </table>
+            </div>
+            <div id="btns">
+                <input type="button" id="order" value="주문하기">
+                <input type="reset" id="cancel" value="주문취소">
+            </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
